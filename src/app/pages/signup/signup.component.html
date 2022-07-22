@@ -1,0 +1,54 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row offset-md-3">
+      <div class="col-md-6">
+        {{user | json}}
+        <mat-card class="text-center" style="width: 30rem;">
+          <form (ngSubmit)="submitForm()">
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Username</mat-label>
+              <input [(ngModel)]="user.username" name="username" matInput placeholder="Enter here">
+              <mat-icon matPrefix>account_circle</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Password</mat-label>
+              <input [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter here">
+              <mat-icon matPrefix>lock</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>FirstName</mat-label>
+              <input name="firstName" [(ngModel)]="user.firstName" matInput placeholder="Enter here">
+              <mat-icon matPrefix>account_circle</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>LastName</mat-label>
+              <input name="lastName" [(ngModel)]="user.lastName" matInput placeholder="Enter here">
+              <mat-icon matPrefix>lock</mat-icon>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Email</mat-label>
+              <input name="email" [(ngModel)]="user.email" type="email" matInput placeholder="Enter here">
+              <mat-icon matPrefix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Phone</mat-label>
+              <input name="phone" [(ngModel)]="user.phone" type="number" matInput placeholder="Enter here">
+              <mat-icon matPrefix>phone</mat-icon>
+            </mat-form-field>
+            <div class="container">
+              <button type="submit" mat-raised-button>Submit</button>
+            </div>
+
+          </form>
+
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
